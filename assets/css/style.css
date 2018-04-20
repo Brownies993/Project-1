@@ -1,0 +1,220 @@
+body {
+    background: url('../images/nafinia-putra-59655-unsplash.jpg');
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.wrapper>div {
+    background-color: rgb(213, 224, 228);
+    text-align: center;
+}
+
+.recipe-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.recipe-image-lg {
+    max-width: 600px;
+    max-height: 600px;
+    margin-bottom: 20px;
+}
+
+.favorite {
+    position: relative;
+    top: -10px;
+}
+
+.favorite:hover {
+    opacity: 0.5;
+}
+
+.modal-header {
+    margin: 0 auto;
+}
+
+.cuisine-button {
+    margin: 5px;
+}
+
+.diet-button {
+    margin: 5px;
+}
+
+.intolerance-button {
+    margin: 5px;
+}
+
+.close-button,
+.subtract-filter {
+    margin-left: 10px;
+}
+
+.filter-modal,
+.recipe-modal,
+.login-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0px;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.recipe-content,
+.login-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cuisine-button,
+#diet-button,
+#intolerance-button {
+    width: 50%;
+    margin: 1px;
+}
+
+.ingredient,
+.filter {
+    margin: 20px;
+    float: left;
+    background-color:white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+
+.fa-trash {
+    margin-left: 10px;
+}
+
+#results-view {
+    clear: both;
+}
+
+#favorite-area {
+    background-color: #aaa;
+    color: red;
+    font-weight: bold;
+    margin: auto;
+}
+
+.navbar-navbar,
+.navbar-expand-lg,
+.navbar-lightbg-light {
+    margin: auto;
+    border: 2px solid skyblue;
+    bottom: -1px;
+    border-bottom-width: -10px;
+}
+
+.navbar-brand {
+    font-family: 'Chicle', cursive;
+    font-size: 32px;
+    background-color: slateblue;
+    border: 2px solid rgb(28, 51, 102);
+    width: 110px;
+}
+
+.login-content {
+    border-spacing: 10px;
+    width: 500px;
+    background-color: steelblue;
+}
+
+#btnLogOut {
+    display: none;
+}
+
+/*.btn-favorite {
+    widows: 100px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+}
+*/
+
+.btn-favorite {
+    height: auto;
+    display: inline-block;
+    margin: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.nav-item {
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+#login-button {
+    color: #007bff;
+}
+
+#query {
+    font-size: 30px;
+}
+
+#query[type=text] {
+    background-color: palegoldenrod;
+}
+
+#add-ingredient, #search-button {
+    font-size: 30px;
+    margin: 20px 40px;
+}
+
+#main {
+    padding-top: 150px;
+}
+
+#fav-nav {
+    float: right;
+}
+
+#favorites-view {
+    padding-top: 50px;
+}
+

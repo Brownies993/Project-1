@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Chef's Den</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">Chef's Den</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+
+
+                <button type="button" class="btn btn-primary col-md-3" class="delicious" data-toggle="recipe-modal" data-target="#type-of-food"
+                    id="cuisine-button">
+                    Cuisine
+                </button>
+
+                <button type="button" class="btn btn-primary" class="delicious" data-toggle="modal" data-target="#type-of-food" id="diet-button">
+                    diet
+                </button>
+
+                <button type="button" class="btn btn-primary" class="delicious" data-toggle="modal" data-target="#type-of-food" id="intolerance-button">
+                    Intolerance
+                </button>
+
+                <div id="cuisine-modal" class="filter-modal">
+                    <div class="modal-content">
+                        <h5 class="modal-title">Cuisine</h5>
+                        <span class="close">&times;</span>
+                        <span id="cuisine-content"></span>
+                    </div>
+                </div>
+                <div id="diet-modal" class="filter-modal">
+                    <div class="modal-content">
+                        <h5 class="modal-title">diet</h5>
+                        <span class="close">&times;</span>
+                        <span id="diet-content"></span>
+                    </div>
+                </div>
+                <div id="intolerance-modal" class="filter-modal">
+                    <div class="modal-content">
+                        <h5 class="modal-title">Intolerance</h5>
+                        <span class="close">&times;</span>
+                        <span id="intolerance-content"></span>
+                    </div>
+                </div>
+                <form>
+                    <button class="dropdown-item" id="area"></button>
+                </form>
+            </ul>
+            
+
+                <!-- Create an id name area for Favorite -->
+
+                <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./favorite.html">Favorites</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="login-button">Sign In</a>
+                        </li>
+    
+                      </ul>
+<!--
+                <div>
+                    <a class="btn-favorite" type="button" href="./favorite.html">Favorite</a>
+                </div>
+
+            </form>
+        </div>
+    -->
+
+        <!-- Modal 2 -->
+<!--
+        <button type="button" id="login-button" class="btn btn-primary">Sign In</button>
+-->
+        <div id="login" class="login-modal">
+            <div class="login-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                    <input id="txtEmail" type="email" placeholder="email">
+                    <input id="password" type="password" placeholder="Password">
+                    <br>
+                    <br>
+                    <button class="btn btn-warning" id="btnLogIn" type="login" placeholder="Login">Log In</button>
+                    <button class="btn btn-secondary" id="btnLogOut" type="logout" placeholder="LogOut">Log Out</button>
+                    <button class="btn btn-warning" id="btnSignUp" type="signup" placeholder="SignUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div id="main" class="text-center" style="margin-bottom: 50px;">
+        <form id="search-form">
+            <input type="text" placeholder="Add Ingredient or Search for a Recipe" id="query" size="50">
+            <br>
+            <input class="btn btn-primary" type="submit" value="Add Ingredient" id="add-ingredient">
+            <input class="btn btn-primary" type="submit" value="Search" id="search-button">
+            <div id="ingredients-view"></div>
+            <div id="filters-view"></div>
+        </form>
+    </div>
+
+    <div class="wrapper" id="results-view"></div>
+
+
+    </nav>
+
+    <div id="recipe" class="recipe-modal">
+        <div class="recipe-content">
+            <span class="close">&times;</span>
+            <span id="recipe-view"></span>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type=“text/javascript” src=“https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js“></script>
+
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    </script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/fridge.js"></script>
+
+</body>
+
+</html>
